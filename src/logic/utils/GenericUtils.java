@@ -6,6 +6,9 @@ import src.model.Stack;
 
 public class GenericUtils {
 
+    public GenericUtils() {
+    }
+
     // 1. Función que invierte los elementos de un Stack genérico
     public static <T> void invertStack(Stack<T> stack) {
         if (stack.isEmpty()) {
