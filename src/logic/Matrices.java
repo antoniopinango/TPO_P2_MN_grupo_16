@@ -26,7 +26,7 @@ public class Matrices {
         }
 
         // Llenamos la matriz transpuesta
-        for (int i = 0; i < n; i++) {
+        for (int i = (n - 1); i >= 0; i--) {
             Stack<Integer> originalStack = queueOfStacks.getStack(i);
             Integer[] tempArray = new Integer[originalStack.size()];
 
