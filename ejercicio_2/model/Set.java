@@ -30,15 +30,43 @@ public class Set<T> implements Iterable<T>{
         return elements.size();
     }
 
-    public LinkedList<T> getElements() {
-        return elements;
-    }
-
     // Implementación de Iterable
     @Override
     public Iterator<T> iterator() {
         return elements.iterator();
     }
 
+    // Metodo para agregar múltiples elementos desde otro conjunto
+    public boolean addAll(Set<T> otherSet) {
+        boolean modified = false;
+        for (T item : otherSet) {
+            if (add(item)) {
+                modified = true; // Al menos un nuevo elemento fue agregado
+            }
+        }
+        return modified; // Devuelve true si se agregaron elementos nuevos
+    }
 
+    // Clase Builder
+    public static class Builder<T> {
+        private Set<T> set;
+
+        public Builder() {
+            this.set = new Set<>();
+        }
+
+        public Builder<T> add(T element) {
+            set.add(element);
+            return this;
+        }
+
+        public Builder<T> addAll(Set<T> otherSet) {
+            set.addAll(otherSet);
+            return this;
+        }
+
+        public Set<T> build() {
+            return set;
+        }
+    }
 }
