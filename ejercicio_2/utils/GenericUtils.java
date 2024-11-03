@@ -1,7 +1,6 @@
 package ejercicio_2.utils;
 
-import java.util.Set;
-import ejercicio_2.model.GenericSet;
+import ejercicio_2.model.Set;
 import ejercicio_2.model.Stack;
 
 public class GenericUtils {
@@ -30,11 +29,11 @@ public class GenericUtils {
     }
 
     // 2. Función que copia un Set genérico
-    public static <T> Set<T> copySet(GenericSet<T> originalSet) {
-        GenericSet<T> newSet = new GenericSet<>();
-        for (T item : originalSet.getElements()) {
+    public static <T> Set<T> copySet(Set<T> originalSet) {
+        Set<T> newSet = new Set<>();
+        for (T item : originalSet) {
             newSet.add(item);
         }
-        return newSet.getElements();
+        return newSet;
     }
 }

@@ -1,7 +1,6 @@
 package ejercicio_2;
 
-import java.util.Set;
-import ejercicio_2.model.GenericSet;
+import ejercicio_2.model.Set;
 import ejercicio_2.model.Stack;
 
 import static ejercicio_2.utils.GenericUtils.copySet;
@@ -33,8 +32,9 @@ public class Main {
         }
 
         // Ejemplo de uso para copiar un set
-        GenericSet<String> originalSet = new GenericSet<>();
+        Set<String> originalSet = new Set<>();
         originalSet.add("A");
+        originalSet.add("B");
         originalSet.add("B");
         originalSet.add("C");
 
