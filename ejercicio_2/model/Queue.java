@@ -3,7 +3,7 @@ package ejercicio_2.model;
 
 import java.util.LinkedList;
 
-class Queue<T> {
+public class Queue<T> {
     private LinkedList<T> elements;
 
     public Queue() {
@@ -27,5 +27,9 @@ class Queue<T> {
 
     public int size() {
         return elements.size();
+    }
+
+    public LinkedList<T> getElements() {
+        return elements;
     }
 }
